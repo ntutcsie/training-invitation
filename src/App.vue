@@ -10,7 +10,7 @@
       >
         <v-flex xs12>
           <v-img
-            src="/img/cover.jpg"
+            :src="baseUrl + 'img/cover.jpg'"
             cover
           >
           </v-img>
@@ -22,7 +22,7 @@
           justify-center
         >
           <v-img
-            src="/img/csie_logo.png"
+            :src="baseUrl + 'img/csie_logo.png'"
             contain
           >
             <v-card class="invitation mt-5 mb-3">
@@ -94,7 +94,10 @@ export default {
     FormDialog
   },
   data () {
-    return {}
+    return {
+      baseUrl:
+        process.env.NODE_ENV === 'production' ? '/training-invitation/' : '/'
+    }
   },
   methods: {
     getYear () {
