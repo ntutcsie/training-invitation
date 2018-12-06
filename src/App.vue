@@ -16,7 +16,7 @@
           </v-img>
         </v-flex>
         <v-flex
-          xs12
+          xs11
           sm8
           md6
           justify-center
@@ -63,11 +63,7 @@
                   wrap
                 >
                   <v-spacer></v-spacer>
-                  <v-btn
-                    class="ma-2"
-                    color="primary"
-                    dark
-                  >報名表單</v-btn>
+                  <form-dialog></form-dialog>
                   <v-spacer></v-spacer>
                 </v-layout>
               </v-card-actions>
@@ -91,7 +87,12 @@
 </template>
 
 <script>
+import FormDialog from '@/components/form-dialog'
+
 export default {
+  components: {
+    FormDialog
+  },
   data () {
     return {}
   },
