@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app dark>
     <v-content app>
       <v-layout
         row
@@ -25,7 +25,7 @@
             :src="baseUrl + 'img/csie_logo.png'"
             contain
           >
-            <v-card class="invitation mt-5 mb-3">
+            <v-card light class="invitation mt-5 mb-3">
               <v-card-text
                 class="text-xs-center display-2"
                 v-text="'<邀請函>'"
