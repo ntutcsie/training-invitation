@@ -1,6 +1,9 @@
 <template>
   <v-app dark>
-    <v-content app>
+    <v-content
+      app
+      class="main"
+    >
       <v-layout
         row
         wrap
@@ -8,67 +11,66 @@
         align-center
         fill-height
       >
-        <v-flex xs12>
-          <v-img
-            :src="baseUrl + 'img/cover.jpg'"
-            cover
-          >
-          </v-img>
-        </v-flex>
         <v-flex
           xs11
           sm8
           md6
           justify-center
         >
-          <v-img
-            :src="baseUrl + 'img/csie_logo.png'"
-            contain
-          >
-            <v-card light class="invitation mt-5 mb-3">
-              <v-card-text
-                class="text-xs-center display-2"
-                v-text="'<邀請函>'"
+          <v-card class="invitation mt-5 mb-3">
+            <v-card-text class="pt-5 specil-font text-xs-center display-2">
+              傳承
+            </v-card-text>
+            <v-divider></v-divider>
+            <v-card-text class="text-xs-center">
+              <p class="specil-font content">
+                各位即將上任的第17屆系學會幹部們
+                <br>
+                <br>
+                資工聖火即將傳承給各位
+                <br>
+                <br>
+                期待各位能讓資工系再次偉大
+                <br>
+                <br>
+              </p>
+              <table class="specil-font">
+                <tr>
+                  <th
+                    class="subheading"
+                    colspan="2"
+                  >記得攜帶</th>
+                </tr>
+                <tr>
+                  <td>筆記本</td>
+                  <td>書寫工具</td>
+                </tr>
+                <tr>
+                  <td>筆電</td>
+                  <td>換洗衣物</td>
+                </tr>
+                <tr>
+                  <td>盥洗用具</td>
+                  <td>雨具</td>
+                </tr>
+                <tr>
+                  <td>個人證件</td>
+                  <td>民生用品</td>
+                </tr>
+              </table>
+            </v-card-text>
+            <v-divider></v-divider>
+            <v-card-actions class="py-3">
+              <v-layout
+                row
+                wrap
               >
-              </v-card-text>
-              <v-divider>
-              </v-divider>
-              <v-card-text class="text-xs-center">
-                <p class="headline">資工系系學會17th</p>
-                <p class="invitation-content">
-                  恭請所有神選之人
-                  <br>
-                  參與此次資工傳承
-                </p>
-                <p class="invitation-info">
-                  107／1／13
-                  <br>
-                  早上9：00
-                  <br>
-                  光華402前
-                </p>
-                <p class="invitation-content">
-                  接受天命
-                </p>
-                <p class="invitation-info">
-                  記得自備
-                  <br>
-                  尊爵筆記本和書寫工具、筆電、換洗衣物、盥洗用具、雨具、個人證件、民生用品
-                </p>
-              </v-card-text>
-              <v-divider></v-divider>
-              <v-card-actions class="">
-                <v-layout
-                  row
-                  wrap
-                >
-                  <v-spacer></v-spacer>
-                  <form-dialog></form-dialog>
-                  <v-spacer></v-spacer>
-                </v-layout>
-              </v-card-actions>
-            </v-card>
-          </v-img>
+                <v-spacer></v-spacer>
+                <form-dialog></form-dialog>
+                <v-spacer></v-spacer>
+              </v-layout>
+            </v-card-actions>
+          </v-card>
         </v-flex>
       </v-layout>
     </v-content>
@@ -108,8 +110,21 @@ export default {
 </script>
 
 <style>
+.main {
+  background-color: black;
+  background-image: url(./assets/bg.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+}
+
+@font-face {
+  font-family: genkai-mincho;
+  src: url("./assets/genkai-mincho.ttf");
+}
+
 .invitation {
-  background-color: rgba(255, 255, 255, 0.9) !important;
+  background-color: rgba(0, 0, 0, 0.39) !important;
 }
 
 .invitation-content {
@@ -120,5 +135,20 @@ export default {
 .invitation-info {
   font-size: 1.2em;
   letter-spacing: 0.4em;
+}
+
+.specil-font {
+  font-family: genkai-mincho !important;
+}
+
+.content {
+  font-weight: 500 !important;
+  font-size: 1.5em !important;
+  line-height: 1.5em !important;
+}
+
+table {
+  margin: auto;
+  width: 80%;
 }
 </style>

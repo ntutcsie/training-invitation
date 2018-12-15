@@ -7,7 +7,7 @@
     <v-btn
       class="my-2"
       slot="activator"
-      color="primary"
+      color="#42badf"
       dark
     >報名</v-btn>
     <v-card
